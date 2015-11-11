@@ -10,7 +10,7 @@ var Header = React.createClass({
 			<nav className="navbar navbar-inverse">
 				<div className="container-fluid">
 					<div className="navbar-header">
-						<a className="navbar-brand" href="">My App</a>
+						<a className="navbar-brand" href=""><svg className="icon icon-small" viewBox="0 0 50 50"><use xlinkHref="#icon-react"></use></svg>My App</a>
 						<button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
 							<span className="icon-bar"></span>
 							<span className="icon-bar"></span>

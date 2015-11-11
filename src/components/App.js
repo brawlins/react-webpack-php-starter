@@ -6,6 +6,7 @@ var Header = require('./Header.js');
 
 require('bootstrap-webpack');
 require('../css/app.css');
+require('../svg/icons.svg');
 
 
 var App = React.createClass({

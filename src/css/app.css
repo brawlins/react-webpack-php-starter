@@ -1,4 +1,16 @@
 /**
- * Overrides Brett
+ * Bootstrap overrides
  */
 .navbar { border-radius: 0; }
+
+/* Icons as SVG element */
+.icon { 
+  display: inline-block; 
+  height: 1em;
+  vertical-align: middle;
+  width: 1em; 
+}
+.icon-small { height: 1em; width: 1em; }
+.icon-medium { height: 2em; width: 2em; }
+.icon-large { height: 3em; width: 3em; }
+.navbar-brand .icon { margin-right: .5em; vertical-align: top; }
