@@ -4,7 +4,6 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var Header = require('./Header.js');
 
-require('expose?$!expose?jQuery!jquery');
 require('bootstrap-webpack');
 require('../css/app.css');
 
