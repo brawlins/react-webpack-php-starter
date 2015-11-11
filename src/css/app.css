@@ -2,6 +2,8 @@
  * Bootstrap overrides
  */
 .navbar { border-radius: 0; }
+.navbar-inverse .navbar-nav > li > .active,
+.navbar-inverse .navbar-brand.active { color: #fff; }
 
 /* Icons as SVG element */
 .icon { 

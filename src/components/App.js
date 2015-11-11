@@ -8,7 +8,6 @@ require('bootstrap-webpack');
 require('../css/app.css');
 require('../svg/icons.svg');
 
-
 var App = React.createClass({
 	render: function() {
 		console.log('App.js');
@@ -17,7 +16,7 @@ var App = React.createClass({
 				<Header />
 				<div className="container">
 					<div className="row col-sm-12">
-						<h2>App.js</h2>
+						{this.props.children}
 					</div>
 				</div>
 			</div>

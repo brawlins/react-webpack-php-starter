@@ -1,8 +1,20 @@
 "use strict";
 
-var React = require('react');
-var ReactDOM = require('react-dom');
-var App = require('./components/App.js');
 console.log('main.js');
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import React from 'react';
+import { render } from 'react-dom';
+import { Router, Route, IndexRoute, Redirect } from 'react-router';
+import App from './components/App.js';
+import HomePage from './components/home/HomePage.js';
+import AboutPage from './components/about/AboutPage.js';
+
+render((
+	<Router>
+		<Route path="/" component={App}>
+			<IndexRoute component={HomePage} />
+			<Route path="about" component={AboutPage}/>
+			<Redirect from="*" to="/" />
+		</Route>
+	</Router>
+), document.getElementById('root'));

@@ -1,7 +1,9 @@
 "use strict";
 
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { Link, IndexLink } from 'react-router';
+
+var activeClassName = 'active';
 
 var Header = React.createClass({
 	render: function() {
@@ -10,7 +12,10 @@ var Header = React.createClass({
 			<nav className="navbar navbar-inverse">
 				<div className="container-fluid">
 					<div className="navbar-header">
-						<a className="navbar-brand" href=""><svg className="icon icon-small" viewBox="0 0 50 50"><use xlinkHref="#icon-react"></use></svg>My App</a>
+						<IndexLink to="/" activeClassName={activeClassName} className="navbar-brand">
+							<svg className="icon icon-small" viewBox="0 0 50 50"><use xlinkHref="#icon-react"></use></svg>
+							<span>My App</span>
+						</IndexLink>
 						<button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
 							<span className="icon-bar"></span>
 							<span className="icon-bar"></span>
@@ -19,7 +24,7 @@ var Header = React.createClass({
 					</div>
 					<div id="navbar" className="navbar-collapse collapse">
 						<ul className="nav navbar-nav">
-							<li><a href="">Page 1</a></li>
+							<li><Link to="/about" activeClassName={activeClassName}>About</Link></li>
 						</ul>
 						<ul className="nav navbar-nav navbar-right">
 							<li><a href="">Logout</a></li>
