@@ -3,8 +3,10 @@
 import React from 'react';
 
 var AboutPage = React.createClass({
-	render: function() {
+	componentDidMount: function() {
 		console.log('AboutPage.js');
+	},
+	render: function() {
 		return (
 			<div>
 				<h2>About</h2>
@@ -13,4 +15,4 @@ var AboutPage = React.createClass({
 	}
 });
 
-module.exports = AboutPage;
+export default AboutPage;

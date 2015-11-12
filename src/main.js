@@ -1,7 +1,5 @@
 "use strict";
 
-console.log('main.js');
-
 import React from 'react';
 import { render } from 'react-dom';
 import { Router, Route, IndexRoute, Redirect } from 'react-router';
@@ -10,6 +8,8 @@ import createBrowserHistory from 'history/lib/createBrowserHistory'
 import App from './components/App.js';
 import HomePage from './components/home/HomePage.js';
 import AboutPage from './components/about/AboutPage.js';
+
+console.log('main.js');
 
 render((
 	<Router history={createBrowserHistory()}>

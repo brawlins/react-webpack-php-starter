@@ -6,8 +6,10 @@ import { Link, IndexLink } from 'react-router';
 var activeClassName = 'active';
 
 var Header = React.createClass({
-	render: function() {
+	componentDidMount: function() {
 		console.log('Header.js');
+	},
+	render: function() {
 		return (
 			<nav className="navbar navbar-inverse">
 				<div className="container-fluid">
@@ -36,4 +38,4 @@ var Header = React.createClass({
 	}
 });
 
-module.exports = Header;
+export default Header;

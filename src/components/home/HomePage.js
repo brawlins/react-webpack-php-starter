@@ -5,6 +5,9 @@ import rp from 'request-promise';
 import { apiUrl } from '../../../src/constants.js';
 
 var HomePage = React.createClass({
+	componentDidMount: function() {
+		console.log('HomePage.js');
+	},
 	handleClick: function() {
 		rp({
 			uri: apiUrl,
@@ -19,7 +22,6 @@ var HomePage = React.createClass({
 		});
 	},
 	render: function() {
-		console.log('HomePage.js');
 		return (
 			<div>
 				<h2>Home</h2>
@@ -29,4 +31,4 @@ var HomePage = React.createClass({
 	}
 });
 
-module.exports = HomePage;
+export default HomePage;

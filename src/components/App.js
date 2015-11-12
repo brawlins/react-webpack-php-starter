@@ -1,16 +1,16 @@
 "use strict";
 
-var React = require('react');
-var ReactDOM = require('react-dom');
-var Header = require('./Header.js');
-
-require('bootstrap-webpack');
-require('../css/app.css');
-require('../svg/icons.svg');
+import React from 'react';
+import Header from './Header.js';
+import {} from 'bootstrap-webpack';
+import {} from '../css/app.css';
+import {} from '../svg/icons.svg';
 
 var App = React.createClass({
-	render: function() {
+	componentDidMount: function() {
 		console.log('App.js');
+	},
+	render: function() {
 		return (
 			<div>
 				<Header />
@@ -24,4 +24,4 @@ var App = React.createClass({
 	}
 });
 
-module.exports = App;
+export default App;
