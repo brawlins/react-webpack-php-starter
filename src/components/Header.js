@@ -27,7 +27,7 @@ var Header = React.createClass({
 							<li><Link to="/about" activeClassName={activeClassName}>About</Link></li>
 						</ul>
 						<ul className="nav navbar-nav navbar-right">
-							<li><a href="">Logout</a></li>
+							<li><a href="/">Logout</a></li>
 						</ul>
 					</div>
 				</div>
