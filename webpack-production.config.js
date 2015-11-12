@@ -1,7 +1,7 @@
 "use strict";
 
-import webpack from 'webpack';
-import webpackConfig from './webpack.config.js';
+var webpack = require('webpack');
+var webpackConfig = require('./webpack.config.js');
 
 // strip out console.log statements
 webpackConfig.module.loaders.push({
@@ -17,4 +17,4 @@ webpackConfig.plugins.push(
 	})
 );
 
-export default webpackConfig;
+module.exports = webpackConfig;

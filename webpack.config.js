@@ -1,9 +1,9 @@
 'use strict';
 
-import path from 'path';
-import webpack from 'webpack';
+var path = require('path');
+var webpack = require('webpack');
 
-export default {
+module.exports = {
 	entry: [
 		path.join(__dirname, 'src/main.js')
 	], 
