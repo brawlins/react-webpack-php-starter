@@ -1,16 +1,20 @@
 {
-  "name": "webpack-only",
+  "name": "react-webpack-boilerplate",
   "version": "1.0.0",
-  "description": "",
+  "description": "A boilerplate starter project for a React application using Webpack for bundling.",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --watch",
     "build": "NODE_ENV=production webpack -p --config ./webpack-production.config.js",
     "prebuild": "rimraf public/build"
   },
-  "author": "",
+  "author": "Brett Rawlins",
   "license": "ISC",
+  "dependencies": {
+    "react": "^0.14.2",
+    "react-dom": "^0.14.2",
+    "react-router": "^1.0.0"
+  },
   "devDependencies": {
     "babel-core": "^6.1.2",
     "babel-loader": "^6.1.0",
@@ -34,9 +38,6 @@
     "less-loader": "^2.2.1",
     "lodash": "^3.10.1",
     "path": "^0.12.7",
-    "react": "^0.14.2",
-    "react-dom": "^0.14.2",
-    "react-router": "^1.0.0",
     "request-promise": "^1.0.2",
     "rimraf": "^2.4.3",
     "strip-loader": "^0.1.0",
