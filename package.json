@@ -1,10 +1,10 @@
 {
-  "name": "react-webpack-boilerplate",
+  "name": "react-webpack-php-starter",
   "version": "1.0.0",
-  "description": "A boilerplate starter project for a React application using Webpack for bundling.",
+  "description": "A boilerplate starter project for a React application using webpack with a PHP back-end.",
   "main": "webpack.config.js",
   "scripts": {
-    "dev": "webpack --watch",
+    "start": "webpack --watch",
     "build": "NODE_ENV=production webpack -p --config ./webpack-production.config.js",
     "prebuild": "rimraf public/build"
   },
