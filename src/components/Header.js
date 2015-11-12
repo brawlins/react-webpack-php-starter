@@ -5,6 +5,9 @@ import { Link, IndexLink } from 'react-router';
 
 var activeClassName = 'active';
 
+/**
+ * Header navigation bar
+ */
 var Header = React.createClass({
 	componentDidMount: function() {
 		console.log('Header.js');

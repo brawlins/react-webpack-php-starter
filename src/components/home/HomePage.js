@@ -4,6 +4,9 @@ import React from 'react';
 import rp from 'request-promise';
 import { apiUrl } from '../../../src/constants.js';
 
+/**
+ * Home Page
+ */
 var HomePage = React.createClass({
 	componentDidMount: function() {
 		console.log('HomePage.js');

@@ -2,6 +2,9 @@
 
 import React from 'react';
 
+/**
+ * About Page
+ */
 var AboutPage = React.createClass({
 	componentDidMount: function() {
 		console.log('AboutPage.js');

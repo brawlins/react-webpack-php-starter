@@ -6,6 +6,12 @@ import {} from 'bootstrap-webpack';
 import {} from '../css/app.css';
 import {} from '../svg/icons.svg';
 
+/**
+ * Application component
+ *
+ * This is the parent component for all routes in the application. It displays
+ * the header and wraps the content of the current route in a container div.
+ */
 var App = React.createClass({
 	componentDidMount: function() {
 		console.log('App.js');
