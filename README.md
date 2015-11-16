@@ -19,9 +19,7 @@ I wanted a setup that would enable the following features:
 * Bootstrap styles
 * SVG icons
 * PHP index file and back-end API
-* Automatic browser reloading
-
-I was able to achieve all except browser reloading. Still working on that. 
+* Automatic browser reloading using Browsersync
 
 ## Directory Structure
 

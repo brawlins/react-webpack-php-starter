@@ -3,6 +3,7 @@
 var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 module.exports = {
 	entry: [
@@ -15,6 +16,15 @@ module.exports = {
 	plugins: [
 		// output a separate css bundle
 		new ExtractTextPlugin('bundle.css'),
+
+		// reloads browser when the watched files change
+		new BrowserSyncPlugin({
+			// use existing Apache virtual host
+			proxy: 'http://local.react-starter/',
+			tunnel: true,
+			// watch the built files and the index file
+			files: ['public/build/*', 'public/index.php']
+		}),
 
 		// set node env
 		new webpack.DefinePlugin({
