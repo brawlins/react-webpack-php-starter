@@ -30,6 +30,7 @@ var Header = React.createClass({
 					<div id="navbar" className="navbar-collapse collapse">
 						<ul className="nav navbar-nav">
 							<li><Link to="/about" activeClassName={activeClassName}>About</Link></li>
+							<li><Link to="/admin" activeClassName={activeClassName}>Admin</Link></li>
 						</ul>
 						<ul className="nav navbar-nav navbar-right">
 							<li><a href="/">Logout</a></li>

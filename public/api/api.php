@@ -95,6 +95,19 @@ class MyApi
 		$this->reply('Hello from the API!');
 	}
 
+	/**
+	 * Determines if the logged in user has admin rights
+	 *
+	 * This is just a placeholder. Here you would check the session or database
+	 * to see if the user has admin rights.
+	 * 
+	 * @return boolean
+	 */
+	public function isAdmin()
+	{
+		$this->reply(true);
+	}
+
 }
 
 $MyApi = new MyApi();

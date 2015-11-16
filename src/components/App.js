@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Header from './Header.js';
-import {} from 'bootstrap-webpack';
+import {} from 'bootstrap/dist/css/bootstrap.css';
 import {} from '../css/app.css';
 import {} from '../svg/icons.svg';
 

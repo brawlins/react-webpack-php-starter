@@ -2,6 +2,7 @@
 
 var path = require('path');
 var webpack = require('webpack');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
 	entry: [
@@ -12,6 +13,9 @@ module.exports = {
 		filename: 'bundle.js'
 	}, 
 	plugins: [
+		// output a separate css bundle
+		new ExtractTextPlugin('bundle.css'),
+
 		// set node env
 		new webpack.DefinePlugin({
 			'process.env.NODE_ENV': JSON.stringify('development')
@@ -25,8 +29,10 @@ module.exports = {
 			// makes jQuery available to Bootstrap js
 			{ test: /bootstrap\/js\//, loader: 'imports?jQuery=jquery' },
 
+			// extracts css as separate output file
+			{ test: /\.css$/, loader: ExtractTextPlugin.extract('style', 'css') },
+
 			// loads font icons for Bootstrap css
-			{ test: /\.css$/, loader: 'style!css' },
 			{ test: /\.woff(2?)(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/font-woff" },
 			{ test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/octet-stream" },
 			{ test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file" },

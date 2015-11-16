@@ -13,7 +13,8 @@
   "dependencies": {
     "react": "^0.14.2",
     "react-dom": "^0.14.2",
-    "react-router": "^1.0.0"
+    "react-router": "^1.0.0",
+    "webpack": "^1.12.4"
   },
   "devDependencies": {
     "babel-core": "^6.1.2",
@@ -22,7 +23,6 @@
     "babel-preset-react": "^6.1.2",
     "bluebird": "^3.0.5",
     "bootstrap": "^3.3.5",
-    "bootstrap-webpack": "0.0.5",
     "cls-bluebird": "^1.0.1",
     "continuation-local-storage": "^3.1.4",
     "css-loader": "^0.22.0",
@@ -30,6 +30,7 @@
     "expose-loader": "^0.7.1",
     "extract-text-webpack-plugin": "^0.9.1",
     "file-loader": "^0.8.4",
+    "fs": "0.0.2",
     "history": "^1.13.0",
     "imports-loader": "^0.6.5",
     "jquery": "^2.1.4",
@@ -42,8 +43,7 @@
     "rimraf": "^2.4.3",
     "strip-loader": "^0.1.0",
     "style-loader": "^0.13.0",
-    "url-loader": "^0.5.6",
-    "webpack": "^1.12.4"
+    "url-loader": "^0.5.6"
   },
   "babel": {
     "presets": [

@@ -4,7 +4,7 @@ This is a boilerplate React application that I use to start new projects. It use
 
 ## Overview
 
-React apps are often served using a node server like Express. However, in my case I wanted to use Apache because we use PHP to manage user authentication via the [Central Authentication Service (CAS)](http://jasig.github.io/cas/). I know there are packages that theoretically can make Express serve PHP, but it was easier to just use our existing Apache server. 
+React apps are often served using a node server like Express. However, in my case I wanted to use Apache because we use PHP to manage user authentication. I know there are packages that theoretically can make Express serve PHP, but it was easier to just use our existing Apache server. 
 
 This happens to be my specific use case at the moment, but this project could easily be adapted to use a node server instead.
 
@@ -18,7 +18,6 @@ I wanted a setup that would enable the following features:
 * Separate builds for development and production
 * Bootstrap styles
 * SVG icons
-* Routing and history without the hash
 * PHP index file and back-end API
 * Automatic browser reloading
 
@@ -37,6 +36,7 @@ The project is structured like this:
     - /css
     - /svg
     - constants.js (application-wide variables)
+    - history.js (browser history as separate module)
     - main.js (the webpack entry file)
 * .gitignore
 * package.json
@@ -44,16 +44,7 @@ The project is structured like this:
 * webpack-production.config.js
 * webpack-config.js
 
-The `build` directory is where the webpack output files go. This directory is ignored by git.
-
-## Server Setup
-
-Configure the server to do the following:
-
-* Serve files from the `public` folder
-* Redirect all requests to `index.php`
-
-The redirect is necessary because this setup uses browser history rather than the default hash history. This makes URLs cleaner ("/about" instead of "/#/about"), but it also means that the server must be configured to handle the real URL. When you hit refresh the server will get a request for "/about" which doesn't actually exist (it's a single page app). It needs to direct all requests to the index file so that the JavaScript can load the appropriate component for that route.
+The `public` directory is the web root. Configure the server to serve files from there. The `build` directory is where the webpack output files go. This directory is ignored by git.
 
 ## Builds
 
