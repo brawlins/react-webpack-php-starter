@@ -53,6 +53,7 @@ module.exports = {
 	}, 
 	// needed to make request-promise work
 	node: {
+		fs: 'empty',
 		net: 'empty',
 		tls: 'empty'
 	}
